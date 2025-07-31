@@ -1,6 +1,6 @@
 # smileback
 
-*Hitchr App: Developer's Manual*
+Hitchr App: Developer's Manual
 1. Introduction
 Welcome to the Hitchr project. This document serves as a guide for developers, detailing the current state of the application, implemented features, and future development areas. Hitchr is a community-driven carpooling application built on the Base44 platform, designed to foster sustainable travel and social connections through gamification.
 
