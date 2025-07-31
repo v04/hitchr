@@ -1,0 +1,56 @@
+{
+  "name": "RTOPlate",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "RTO code like KA-01, DL-05"
+    },
+    "state": {
+      "type": "string",
+      "description": "State name"
+    },
+    "region": {
+      "type": "string",
+      "description": "Region/district name"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "uncommon",
+        "rare",
+        "legendary"
+      ],
+      "default": "common",
+      "description": "Rarity level of the plate"
+    },
+    "bonus_tokens": {
+      "type": "number",
+      "default": 5,
+      "description": "Bonus tokens for discovering this plate"
+    },
+    "discovered_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs who have collected this plate"
+    },
+    "first_discovered_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this plate was first discovered"
+    },
+    "discovery_count": {
+      "type": "number",
+      "default": 0,
+      "description": "How many times this plate has been discovered"
+    }
+  },
+  "required": [
+    "code",
+    "state",
+    "region"
+  ]
+}

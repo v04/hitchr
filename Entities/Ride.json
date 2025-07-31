@@ -1,0 +1,88 @@
+{
+  "name": "Ride",
+  "type": "object",
+  "properties": {
+    "pilot_id": {
+      "type": "string",
+      "description": "ID of the driver"
+    },
+    "rider_id": {
+      "type": "string",
+      "description": "ID of the passenger"
+    },
+    "pickup_location": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "address": {
+          "type": "string"
+        }
+      }
+    },
+    "destination": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "address": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "requested",
+        "accepted",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "requested"
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "Distance in kilometers"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Estimated duration in minutes"
+    },
+    "tokens_earned": {
+      "type": "number",
+      "default": 10,
+      "description": "Tokens earned from this ride"
+    },
+    "pilot_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Rider's rating of pilot"
+    },
+    "rider_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Pilot's rating of rider"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When ride was completed"
+    }
+  },
+  "required": [
+    "pilot_id",
+    "pickup_location",
+    "destination"
+  ]
+}

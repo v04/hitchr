@@ -1,0 +1,56 @@
+{
+  "name": "Reward",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Reward name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Reward description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "food",
+        "travel",
+        "clothing",
+        "gear",
+        "voucher"
+      ],
+      "description": "Reward category"
+    },
+    "token_cost": {
+      "type": "number",
+      "description": "Cost in tokens"
+    },
+    "real_value": {
+      "type": "number",
+      "description": "Real world value in currency"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Reward image"
+    },
+    "partner_brand": {
+      "type": "string",
+      "description": "Partner brand offering reward"
+    },
+    "stock_available": {
+      "type": "number",
+      "default": 100,
+      "description": "Available stock"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether reward is available"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "token_cost"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Story",
+  "type": "object",
+  "properties": {
+    "ride_id": {
+      "type": "string",
+      "description": "Associated ride ID"
+    },
+    "author_id": {
+      "type": "string",
+      "description": "User who created the story"
+    },
+    "title": {
+      "type": "string",
+      "description": "Story title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Story content/description"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Optional story image"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Story tags"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether story is featured"
+    }
+  },
+  "required": [
+    "author_id",
+    "title",
+    "content"
+  ]
+}
